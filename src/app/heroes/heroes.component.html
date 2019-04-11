@@ -5,12 +5,7 @@
   </li>
 </ul>
 
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedHero.name" placeholder="name" />
-    </label>
-  </div>
-</div>
+<!-- The parent HeroesComponent will control the child HeroDetailComponent by -->
+<!-- sending it a new hero to display whenever the user selects a hero from the list. -->
+<!-- Bind the HeroesComponent.selectedHero to the element's hero property. -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
